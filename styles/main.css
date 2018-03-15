@@ -1,0 +1,273 @@
+html,
+body
+{
+    font-family: 'Roboto', serif;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: #373737;
+    background-color: #000;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2
+{
+    font-family: 'Lora', serif;
+    font-size: 42px;
+    font-weight: 400;
+
+    color: #ab987a;
+}
+nav
+{
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+
+
+}
+ul
+{
+    float: left;
+    overflow: hidden;
+
+    margin: 0 auto;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.navbar-right
+{
+    float: right !important;
+
+    margin-top: 8px;
+}
+ul li
+{
+    display: inline-block;
+}
+
+ul li a, .volume-control i
+{
+    display: block;
+
+    padding: 14px 16px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+/* Change the link color to #111 on hover */
+li a:hover
+{
+    color: #f8f8f8;
+}
+
+#name
+{
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    font-weight: 400;
+
+    transition: 0.2s;
+}
+
+.fullscreen-bg {
+      width: 100%;
+  height: 100%;
+  background-size: cover;
+  
+}
+
+.fullscreen-bg__video {
+     position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+#hero-image
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    max-height: 1920px;
+}
+
+.seciton {
+    width: 100%;
+    text-align: center;
+    padding: 10px 10%;
+    z-index: 2;
+    position: absolute;
+    bottom:0;
+}
+
+.details-wrapper {
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url("../images/bletchley_park.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    animation: fade-in 5s;
+}
+
+@keyframes fade-in {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.details {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /*it can be fixed too*/
+  left: 0;
+  overflow: auto;
+  width: 600px; 
+  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  max-width: 100%;
+  height: 300px;
+  max-height: 100%;
+  margin: auto;
+  text-align: center;
+  color: #525252; 
+
+  animation: fade-in 8s;
+}
+
+.details p {
+  color: #f4f4f4;
+}
+
+.container {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  /*it can be fixed too*/
+  left: 0;
+  overflow: auto;
+
+  /*this to solve "the content will not be cut when the window is smaller than the content": */
+  max-width: 100%;
+  height: 300px;
+  max-height: 100%;
+  margin: auto;
+  text-align: center;
+  color: #525252; }
+
+footer
+{
+    width: 100%;
+
+    text-align: center;
+
+
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+footer p
+{
+    color: #525252;
+}
+
+footer a {
+    color: #ab987a;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+
+@media (min-width: 867px) {
+   .hero-text
+{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.hero-sub
+{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+}
+@media (max-width: 1200px) {
+
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 867px) {
+  body {
+    background-color: #111;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .container 
+  {
+    height: auto !important;
+  }
+
+  .fullscreen-bg {
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/Alan-Turing-mobile.jpg')  no-repeat center center fixed;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+
+  .hero-text, .hero-sub {
+    position: relative !important;
+  }
+
+}
